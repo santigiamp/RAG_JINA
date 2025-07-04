@@ -1,0 +1,1858 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "JinaEmbeddings2025",
+            "id": "EmbeddingModel-4BQyB",
+            "name": "embeddings",
+            "output_types": [
+              "Embeddings"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "embedding",
+            "id": "QdrantVectorStoreComponent-DNqZu",
+            "inputTypes": [
+              "Embeddings"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__EmbeddingModel-4BQyB{œdataTypeœ:œJinaEmbeddings2025œ,œidœ:œEmbeddingModel-4BQyBœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}-QdrantVectorStoreComponent-DNqZu{œfieldNameœ:œembeddingœ,œidœ:œQdrantVectorStoreComponent-DNqZuœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "EmbeddingModel-4BQyB",
+        "sourceHandle": "{œdataTypeœ:œJinaEmbeddings2025œ,œidœ:œEmbeddingModel-4BQyBœ,œnameœ:œembeddingsœ,œoutput_typesœ:[œEmbeddingsœ]}",
+        "target": "QdrantVectorStoreComponent-DNqZu",
+        "targetHandle": "{œfieldNameœ:œembeddingœ,œidœ:œQdrantVectorStoreComponent-DNqZuœ,œinputTypesœ:[œEmbeddingsœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "QdrantVectorStoreComponent",
+            "id": "QdrantVectorStoreComponent-DNqZu",
+            "name": "search_results",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_data",
+            "id": "ParserComponent-bmh45",
+            "inputTypes": [
+              "DataFrame",
+              "Data"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__QdrantVectorStoreComponent-DNqZu{œdataTypeœ:œQdrantVectorStoreComponentœ,œidœ:œQdrantVectorStoreComponent-DNqZuœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}-ParserComponent-bmh45{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-bmh45œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "QdrantVectorStoreComponent-DNqZu",
+        "sourceHandle": "{œdataTypeœ:œQdrantVectorStoreComponentœ,œidœ:œQdrantVectorStoreComponent-DNqZuœ,œnameœ:œsearch_resultsœ,œoutput_typesœ:[œDataœ]}",
+        "target": "ParserComponent-bmh45",
+        "targetHandle": "{œfieldNameœ:œinput_dataœ,œidœ:œParserComponent-bmh45œ,œinputTypesœ:[œDataFrameœ,œDataœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ParserComponent",
+            "id": "ParserComponent-bmh45",
+            "name": "parsed_text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "context",
+            "id": "Prompt-CXyt7",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ParserComponent-bmh45{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-bmh45œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}-Prompt-CXyt7{œfieldNameœ:œcontextœ,œidœ:œPrompt-CXyt7œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ParserComponent-bmh45",
+        "sourceHandle": "{œdataTypeœ:œParserComponentœ,œidœ:œParserComponent-bmh45œ,œnameœ:œparsed_textœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt-CXyt7",
+        "targetHandle": "{œfieldNameœ:œcontextœ,œidœ:œPrompt-CXyt7œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-CXyt7",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "GroqModel-4pZAi",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-CXyt7{œdataTypeœ:œPromptœ,œidœ:œPrompt-CXyt7œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-GroqModel-4pZAi{œfieldNameœ:œinput_valueœ,œidœ:œGroqModel-4pZAiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-CXyt7",
+        "sourceHandle": "{œdataTypeœ:œPromptœ,œidœ:œPrompt-CXyt7œ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "GroqModel-4pZAi",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œGroqModel-4pZAiœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "TelegramChatInput",
+            "id": "Webhook-Sh0wG",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "text_input",
+            "id": "EmbeddingModel-4BQyB",
+            "inputTypes": [
+              "Message",
+              "Data",
+              "str"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__Webhook-Sh0wG{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-EmbeddingModel-4BQyB{œfieldNameœ:œtext_inputœ,œidœ:œEmbeddingModel-4BQyBœ,œinputTypesœ:[œMessageœ,œDataœ,œstrœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "Webhook-Sh0wG",
+        "sourceHandle": "{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "EmbeddingModel-4BQyB",
+        "targetHandle": "{œfieldNameœ:œtext_inputœ,œidœ:œEmbeddingModel-4BQyBœ,œinputTypesœ:[œMessageœ,œDataœ,œstrœ],œtypeœ:œotherœ}"
+      },
+      {
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "TelegramChatInput",
+            "id": "Webhook-Sh0wG",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "search_query",
+            "id": "QdrantVectorStoreComponent-DNqZu",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "query"
+          }
+        },
+        "id": "xy-edge__Webhook-Sh0wG{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-QdrantVectorStoreComponent-DNqZu{œfieldNameœ:œsearch_queryœ,œidœ:œQdrantVectorStoreComponent-DNqZuœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}",
+        "selected": false,
+        "source": "Webhook-Sh0wG",
+        "sourceHandle": "{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "QdrantVectorStoreComponent-DNqZu",
+        "targetHandle": "{œfieldNameœ:œsearch_queryœ,œidœ:œQdrantVectorStoreComponent-DNqZuœ,œinputTypesœ:[œMessageœ],œtypeœ:œqueryœ}"
+      },
+      {
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "TelegramChatInput",
+            "id": "Webhook-Sh0wG",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "query",
+            "id": "Prompt-CXyt7",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Webhook-Sh0wG{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Prompt-CXyt7{œfieldNameœ:œqueryœ,œidœ:œPrompt-CXyt7œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Webhook-Sh0wG",
+        "sourceHandle": "{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt-CXyt7",
+        "targetHandle": "{œfieldNameœ:œqueryœ,œidœ:œPrompt-CXyt7œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "GroqModel",
+            "id": "GroqModel-4pZAi",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "rag_response",
+            "id": "Webhook-0T5Mg",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__GroqModel-4pZAi{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-4pZAiœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-Webhook-0T5Mg{œfieldNameœ:œrag_responseœ,œidœ:œWebhook-0T5Mgœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GroqModel-4pZAi",
+        "sourceHandle": "{œdataTypeœ:œGroqModelœ,œidœ:œGroqModel-4pZAiœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Webhook-0T5Mg",
+        "targetHandle": "{œfieldNameœ:œrag_responseœ,œidœ:œWebhook-0T5Mgœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "data": {
+          "sourceHandle": {
+            "dataType": "TelegramChatInput",
+            "id": "Webhook-Sh0wG",
+            "name": "chat_id",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "chat_id",
+            "id": "Webhook-0T5Mg",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Webhook-Sh0wG{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œchat_idœ,œoutput_typesœ:[œMessageœ]}-Webhook-0T5Mg{œfieldNameœ:œchat_idœ,œidœ:œWebhook-0T5Mgœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Webhook-Sh0wG",
+        "sourceHandle": "{œdataTypeœ:œTelegramChatInputœ,œidœ:œWebhook-Sh0wGœ,œnameœ:œchat_idœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Webhook-0T5Mg",
+        "targetHandle": "{œfieldNameœ:œchat_idœ,œidœ:œWebhook-0T5Mgœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "QdrantVectorStoreComponent-DNqZu",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Qdrant Vector Store with search capabilities",
+            "display_name": "Qdrant",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "collection_name",
+              "host",
+              "port",
+              "grpc_port",
+              "api_key",
+              "prefix",
+              "timeout",
+              "path",
+              "url",
+              "distance_func",
+              "content_payload_key",
+              "metadata_payload_key",
+              "ingest_data",
+              "search_query",
+              "should_cache_vector_store",
+              "embedding",
+              "number_of_results"
+            ],
+            "frozen": false,
+            "icon": "Qdrant",
+            "legacy": false,
+            "lf_version": "1.4.3",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Search Results",
+                "hidden": false,
+                "method": "search_documents",
+                "name": "search_results",
+                "options": null,
+                "required_inputs": [
+                  "collection_name"
+                ],
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "hidden": false,
+                "method": "as_dataframe",
+                "name": "dataframe",
+                "options": null,
+                "required_inputs": [],
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "API Key",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langchain.embeddings.base import Embeddings\nfrom langchain_community.vectorstores import Qdrant\n\nfrom langflow.base.vectorstores.model import LCVectorStoreComponent, check_cached_vector_store\nfrom langflow.helpers.data import docs_to_data\nfrom langflow.io import (\n    DropdownInput,\n    HandleInput,\n    IntInput,\n    SecretStrInput,\n    StrInput,\n)\nfrom langflow.schema import Data\n\n\nclass QdrantVectorStoreComponent(LCVectorStoreComponent):\n    display_name = \"Qdrant\"\n    description = \"Qdrant Vector Store with search capabilities\"\n    icon = \"Qdrant\"\n\n    inputs = [\n        StrInput(name=\"collection_name\", display_name=\"Collection Name\", required=True),\n        StrInput(name=\"host\", display_name=\"Host\", value=\"localhost\", advanced=True),\n        IntInput(name=\"port\", display_name=\"Port\", value=6333, advanced=True),\n        IntInput(name=\"grpc_port\", display_name=\"gRPC Port\", value=6334, advanced=True),\n        SecretStrInput(name=\"api_key\", display_name=\"API Key\", advanced=True),\n        StrInput(name=\"prefix\", display_name=\"Prefix\", advanced=True),\n        IntInput(name=\"timeout\", display_name=\"Timeout\", advanced=True),\n        StrInput(name=\"path\", display_name=\"Path\", advanced=True),\n        StrInput(name=\"url\", display_name=\"URL\", advanced=True),\n        DropdownInput(\n            name=\"distance_func\",\n            display_name=\"Distance Function\",\n            options=[\"Cosine\", \"Euclidean\", \"Dot Product\"],\n            value=\"Cosine\",\n            advanced=True,\n        ),\n        StrInput(name=\"content_payload_key\", display_name=\"Content Payload Key\", value=\"page_content\", advanced=True),\n        StrInput(name=\"metadata_payload_key\", display_name=\"Metadata Payload Key\", value=\"metadata\", advanced=True),\n        *LCVectorStoreComponent.inputs,\n        HandleInput(name=\"embedding\", display_name=\"Embedding\", input_types=[\"Embeddings\"]),\n        IntInput(\n            name=\"number_of_results\",\n            display_name=\"Number of Results\",\n            info=\"Number of results to return.\",\n            value=4,\n            advanced=True,\n        ),\n    ]\n\n    @check_cached_vector_store\n    def build_vector_store(self) -> Qdrant:\n        qdrant_kwargs = {\n            \"collection_name\": self.collection_name,\n            \"content_payload_key\": self.content_payload_key,\n            \"metadata_payload_key\": self.metadata_payload_key,\n        }\n\n        server_kwargs = {\n            \"host\": self.host or None,\n            \"port\": int(self.port),  # Ensure port is an integer\n            \"grpc_port\": int(self.grpc_port),  # Ensure grpc_port is an integer\n            \"api_key\": self.api_key,\n            \"prefix\": self.prefix,\n            # Ensure timeout is an integer\n            \"timeout\": int(self.timeout) if self.timeout else None,\n            \"path\": self.path or None,\n            \"url\": self.url or None,\n        }\n\n        server_kwargs = {k: v for k, v in server_kwargs.items() if v is not None}\n\n        # Convert DataFrame to Data if needed using parent's method\n        self.ingest_data = self._prepare_ingest_data()\n\n        documents = []\n        for _input in self.ingest_data or []:\n            if isinstance(_input, Data):\n                documents.append(_input.to_lc_document())\n            else:\n                documents.append(_input)\n\n        if not isinstance(self.embedding, Embeddings):\n            msg = \"Invalid embedding object\"\n            raise TypeError(msg)\n\n        if documents:\n            qdrant = Qdrant.from_documents(documents, embedding=self.embedding, **qdrant_kwargs, **server_kwargs)\n        else:\n            from qdrant_client import QdrantClient\n\n            client = QdrantClient(**server_kwargs)\n            qdrant = Qdrant(embeddings=self.embedding, client=client, **qdrant_kwargs)\n\n        return qdrant\n\n    def search_documents(self) -> list[Data]:\n        vector_store = self.build_vector_store()\n\n        if self.search_query and isinstance(self.search_query, str) and self.search_query.strip():\n            docs = vector_store.similarity_search(\n                query=self.search_query,\n                k=self.number_of_results,\n            )\n\n            data = docs_to_data(docs)\n            self.status = data\n            return data\n        return []\n"
+              },
+              "collection_name": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Collection Name",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "collection_name",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "manual_jina_bulletproof"
+              },
+              "content_payload_key": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "Content Payload Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "content_payload_key",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "content"
+              },
+              "distance_func": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Distance Function",
+                "dynamic": false,
+                "info": "",
+                "name": "distance_func",
+                "options": [
+                  "Cosine",
+                  "Euclidean",
+                  "Dot Product"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Cosine"
+              },
+              "embedding": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Embedding",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Embeddings"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "embedding",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "grpc_port": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "gRPC Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "grpc_port",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 6334
+              },
+              "host": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Host",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "host",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "ingest_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Ingest Data",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Data",
+                  "DataFrame"
+                ],
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "ingest_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "metadata_payload_key": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Metadata Payload Key",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "metadata_payload_key",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "metadata"
+              },
+              "number_of_results": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Number of Results",
+                "dynamic": false,
+                "info": "Number of results to return.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "number_of_results",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 10
+              },
+              "path": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Path",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "path",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "port": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Port",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "port",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 6333
+              },
+              "prefix": {
+                "_input_type": "StrInput",
+                "advanced": true,
+                "display_name": "Prefix",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "prefix",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "search_query": {
+                "_input_type": "QueryInput",
+                "advanced": false,
+                "display_name": "Search Query",
+                "dynamic": false,
+                "info": "Enter a query to run a similarity search.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "search_query",
+                "placeholder": "Enter a query...",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "query",
+                "value": "ChatInput.message"
+              },
+              "should_cache_vector_store": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Cache Vector Store",
+                "dynamic": false,
+                "info": "If True, the vector store will be cached for the current build of the component. This is useful for components that have multiple output methods and want to share the same vector store.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_cache_vector_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "timeout": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Timeout",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "timeout",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "url": {
+                "_input_type": "StrInput",
+                "advanced": false,
+                "display_name": "URL",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "url",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "https://dc51a7c5-fd84-4f32-bbb6-2bdd6ac237af.us-east-1-0.aws.cloud.qdrant.io:6333"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "QdrantVectorStoreComponent"
+        },
+        "dragging": false,
+        "id": "QdrantVectorStoreComponent-DNqZu",
+        "measured": {
+          "height": 697,
+          "width": 320
+        },
+        "position": {
+          "x": 241.5692394169032,
+          "y": -603.1147872972812
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GroqModel-4pZAi",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using Groq.",
+            "display_name": "Groq",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "api_key",
+              "base_url",
+              "max_tokens",
+              "temperature",
+              "n",
+              "model_name",
+              "tool_model_enabled"
+            ],
+            "frozen": false,
+            "icon": "Groq",
+            "legacy": false,
+            "lf_version": "1.4.3",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "hidden": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": [],
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": [],
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Groq API Key",
+                "dynamic": false,
+                "info": "API key for the Groq API.",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "base_url": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Groq API Base",
+                "dynamic": false,
+                "info": "Base URL path for API requests, leave blank if not using a proxy or service emulator.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "base_url",
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "https://api.groq.com"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import requests\nfrom loguru import logger\nfrom pydantic.v1 import SecretStr\n\nfrom langflow.base.models.groq_constants import (\n    GROQ_MODELS,\n    TOOL_CALLING_UNSUPPORTED_GROQ_MODELS,\n    UNSUPPORTED_GROQ_MODELS,\n)\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.io import BoolInput, DropdownInput, IntInput, MessageTextInput, SecretStrInput, SliderInput\n\n\nclass GroqModel(LCModelComponent):\n    display_name: str = \"Groq\"\n    description: str = \"Generate text using Groq.\"\n    icon = \"Groq\"\n    name = \"GroqModel\"\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        SecretStrInput(\n            name=\"api_key\", display_name=\"Groq API Key\", info=\"API key for the Groq API.\", real_time_refresh=True\n        ),\n        MessageTextInput(\n            name=\"base_url\",\n            display_name=\"Groq API Base\",\n            info=\"Base URL path for API requests, leave blank if not using a proxy or service emulator.\",\n            advanced=True,\n            value=\"https://api.groq.com\",\n            real_time_refresh=True,\n        ),\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Output Tokens\",\n            info=\"The maximum number of tokens to generate.\",\n            advanced=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            info=\"Run inference with this temperature. Must by in the closed interval [0.0, 1.0].\",\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            advanced=True,\n        ),\n        IntInput(\n            name=\"n\",\n            display_name=\"N\",\n            info=\"Number of chat completions to generate for each prompt. \"\n            \"Note that the API may not return the full n completions if duplicates are generated.\",\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model\",\n            info=\"The name of the model to use.\",\n            options=GROQ_MODELS,\n            value=GROQ_MODELS[0],\n            refresh_button=True,\n            combobox=True,\n        ),\n        BoolInput(\n            name=\"tool_model_enabled\",\n            display_name=\"Enable Tool Models\",\n            info=(\n                \"Select if you want to use models that can work with tools. If yes, only those models will be shown.\"\n            ),\n            advanced=False,\n            value=False,\n            real_time_refresh=True,\n        ),\n    ]\n\n    def get_models(self, tool_model_enabled: bool | None = None) -> list[str]:\n        try:\n            url = f\"{self.base_url}/openai/v1/models\"\n            headers = {\"Authorization\": f\"Bearer {self.api_key}\", \"Content-Type\": \"application/json\"}\n\n            response = requests.get(url, headers=headers, timeout=10)\n            response.raise_for_status()\n            model_list = response.json()\n            model_ids = [\n                model[\"id\"] for model in model_list.get(\"data\", []) if model[\"id\"] not in UNSUPPORTED_GROQ_MODELS\n            ]\n        except (ImportError, ValueError, requests.exceptions.RequestException) as e:\n            logger.exception(f\"Error getting model names: {e}\")\n            model_ids = GROQ_MODELS\n        if tool_model_enabled:\n            try:\n                from langchain_groq import ChatGroq\n            except ImportError as e:\n                msg = \"langchain_groq is not installed. Please install it with `pip install langchain_groq`.\"\n                raise ImportError(msg) from e\n            for model in model_ids:\n                model_with_tool = ChatGroq(\n                    model=model,\n                    api_key=self.api_key,\n                    base_url=self.base_url,\n                )\n                if not self.supports_tool_calling(model_with_tool) or model in TOOL_CALLING_UNSUPPORTED_GROQ_MODELS:\n                    model_ids.remove(model)\n            return model_ids\n        return model_ids\n\n    def update_build_config(self, build_config: dict, field_value: str, field_name: str | None = None):\n        if field_name in {\"base_url\", \"model_name\", \"tool_model_enabled\", \"api_key\"} and field_value:\n            try:\n                if len(self.api_key) != 0:\n                    try:\n                        ids = self.get_models(tool_model_enabled=self.tool_model_enabled)\n                    except (ImportError, ValueError, requests.exceptions.RequestException) as e:\n                        logger.exception(f\"Error getting model names: {e}\")\n                        ids = GROQ_MODELS\n                    build_config[\"model_name\"][\"options\"] = ids\n                    build_config[\"model_name\"][\"value\"] = ids[0]\n            except Exception as e:\n                msg = f\"Error getting model names: {e}\"\n                raise ValueError(msg) from e\n        return build_config\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        try:\n            from langchain_groq import ChatGroq\n        except ImportError as e:\n            msg = \"langchain-groq is not installed. Please install it with `pip install langchain-groq`.\"\n            raise ImportError(msg) from e\n\n        return ChatGroq(\n            model=self.model_name,\n            max_tokens=self.max_tokens or None,\n            temperature=self.temperature,\n            base_url=self.base_url,\n            n=self.n or 1,\n            api_key=SecretStr(self.api_key).get_secret_value(),\n            streaming=self.stream,\n        )\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "max_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Max Output Tokens",
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_tokens",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": true,
+                "dialog_inputs": {},
+                "display_name": "Model",
+                "dynamic": false,
+                "info": "The name of the model to use.",
+                "name": "model_name",
+                "options": [
+                  "compound-beta",
+                  "llama-3.3-70b-versatile",
+                  "gemma2-9b-it",
+                  "deepseek-r1-distill-llama-70b",
+                  "meta-llama/llama-prompt-guard-2-86m",
+                  "llama3-8b-8192",
+                  "meta-llama/llama-prompt-guard-2-22m",
+                  "compound-beta-mini"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "refresh_button": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "meta-llama/llama-4-scout-17b-16e-instruct"
+              },
+              "n": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "N",
+                "dynamic": false,
+                "info": "Number of chat completions to generate for each prompt. Note that the API may not return the full n completions if duplicates are generated.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "n",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Eres un experto en manuales técnicos. Proporciona respuestas precisas, completas y útiles basadas únicamente en la información del manual proporcionado. Si la información no está disponible, indica claramente esta limitación."
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": true,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Run inference with this temperature. Must by in the closed interval [0.0, 1.0].",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.01
+              },
+              "tool_model_enabled": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Enable Tool Models",
+                "dynamic": false,
+                "info": "Select if you want to use models that can work with tools. If yes, only those models will be shown.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "tool_model_enabled",
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "GroqModel"
+        },
+        "dragging": false,
+        "id": "GroqModel-4pZAi",
+        "measured": {
+          "height": 567,
+          "width": 320
+        },
+        "position": {
+          "x": 1569.5290312044015,
+          "y": -660.2107055183322
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "EmbeddingModel-4BQyB",
+          "node": {
+            "base_classes": [
+              "Embeddings"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate embeddings using Jina AI V4 (2048 dimensions)",
+            "display_name": "Jina AI Embeddings",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "text_input",
+              "jina_api_key",
+              "model_name",
+              "base_url"
+            ],
+            "frozen": false,
+            "icon": "Jina",
+            "legacy": false,
+            "lf_version": "1.4.3",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Embeddings",
+                "hidden": false,
+                "method": "build_embeddings",
+                "name": "embeddings",
+                "options": null,
+                "required_inputs": [
+                  "jina_api_key"
+                ],
+                "selected": "Embeddings",
+                "tool_mode": true,
+                "types": [
+                  "Embeddings"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "base_url": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Base URL",
+                "dynamic": false,
+                "info": "Jina AI API endpoint",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "base_url",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "https://api.jina.ai/v1/embeddings"
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.embeddings.model import LCEmbeddingsModel\nfrom langflow.field_typing import Embeddings\nfrom langflow.io import SecretStrInput, MessageTextInput, DropdownInput, HandleInput\nfrom typing import List, Optional\nimport requests\n\n\nclass JinaEmbeddings2025(LCEmbeddingsModel):\n    display_name: str = \"Jina AI Embeddings\"\n    description: str = \"Generate embeddings using Jina AI V4 (2048 dimensions)\"\n    icon: str = \"Jina\"\n    name: str = \"JinaEmbeddings2025\"\n\n    inputs = [\n        HandleInput(\n            name=\"text_input\",\n            display_name=\"Text Input\",\n            info=\"Text to generate embeddings for\",\n            input_types=[\"Message\", \"Data\", \"str\"],\n            required=True,\n        ),\n        SecretStrInput(\n            name=\"jina_api_key\",\n            display_name=\"Jina API Key\",\n            info=\"Your Jina AI API key from https://jina.ai/embeddings/\",\n            required=True,\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            options=[\n                \"jina-embeddings-v4\",\n                \"jina-embeddings-v3\", \n                \"jina-embeddings-v2\",\n            ],\n            value=\"jina-embeddings-v4\",\n            info=\"Jina AI embedding model to use\",\n        ),\n        MessageTextInput(\n            name=\"base_url\",\n            display_name=\"Base URL\",\n            value=\"https://api.jina.ai/v1/embeddings\",\n            info=\"Jina AI API endpoint\",\n            advanced=True,\n        ),\n    ]\n\n    def build_embeddings(self) -> Embeddings:\n        \"\"\"Build Jina AI embeddings compatible with vector stores\"\"\"\n        \n        from langchain_core.embeddings import Embeddings as BaseEmbeddings\n        \n        class JinaAIEmbeddings(BaseEmbeddings):\n            \"\"\"Jina AI embeddings implementation\"\"\"\n            \n            def __init__(self, api_key: str, model: str = \"jina-embeddings-v4\", base_url: str = \"https://api.jina.ai/v1/embeddings\"):\n                self.api_key = api_key\n                self.model = model\n                self.base_url = base_url\n            \n            def embed_documents(self, texts: List[str]) -> List[List[float]]:\n                \"\"\"Embed search docs.\"\"\"\n                return [self.embed_query(text) for text in texts]\n            \n            def embed_query(self, text: str) -> List[float]:\n                \"\"\"Embed query text.\"\"\"\n                return self._create_embedding(text)\n            \n            def _create_embedding(self, text: str) -> List[float]:\n                \"\"\"Create embedding using Jina AI API\"\"\"\n                \n                # Extract text from various input types\n                if hasattr(text, 'text'):\n                    text = text.text\n                elif hasattr(text, 'data'):\n                    text = str(text.data)\n                else:\n                    text = str(text)\n                \n                headers = {\n                    \"Authorization\": f\"Bearer {self.api_key}\",\n                    \"Content-Type\": \"application/json\"\n                }\n                \n                payload = {\n                    \"model\": self.model,\n                    \"input\": [{\"text\": str(text)[:8000]}],\n                    \"normalized\": True,\n                    \"embedding_type\": \"float\"\n                }\n                \n                try:\n                    response = requests.post(\n                        self.base_url,\n                        headers=headers,\n                        json=payload,\n                        timeout=30\n                    )\n                    \n                    if response.status_code == 200:\n                        data = response.json()\n                        return data[\"data\"][0][\"embedding\"]\n                    elif response.status_code == 401:\n                        raise Exception(\"Invalid Jina AI API key\")\n                    elif response.status_code == 429:\n                        raise Exception(\"Jina AI rate limit exceeded\")\n                    else:\n                        raise Exception(f\"Jina AI API error: {response.status_code}\")\n                        \n                except requests.exceptions.RequestException as e:\n                    raise Exception(f\"Jina AI request failed: {e}\")\n                except Exception as e:\n                    # Fallback to zero vector with correct dimensions\n                    print(f\"Warning: Jina AI embedding failed ({e}), using fallback\")\n                    return [0.0] * 2048\n        \n        return JinaAIEmbeddings(\n            api_key=self.jina_api_key,\n            model=self.model_name,\n            base_url=self.base_url\n        )"
+              },
+              "jina_api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Jina API Key",
+                "dynamic": false,
+                "info": "Your Jina AI API key from https://jina.ai/embeddings/",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "jina_api_key",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "Jina AI embedding model to use",
+                "name": "model_name",
+                "options": [
+                  "jina-embeddings-v4",
+                  "jina-embeddings-v3",
+                  "jina-embeddings-v2"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "jina-embeddings-v4"
+              },
+              "text_input": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Text Input",
+                "dynamic": false,
+                "info": "Text to generate embeddings for",
+                "input_types": [
+                  "Message",
+                  "Data",
+                  "str"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "text_input",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "JinaEmbeddings2025"
+        },
+        "dragging": false,
+        "id": "EmbeddingModel-4BQyB",
+        "measured": {
+          "height": 373,
+          "width": 320
+        },
+        "position": {
+          "x": -178.4574368784723,
+          "y": -782.6228883481731
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ParserComponent-bmh45",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Format a DataFrame or Data object into text using a template. Enable 'Stringify' to convert input into a readable string instead.",
+            "display_name": "Parser",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "mode",
+              "pattern",
+              "input_data",
+              "sep"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "legacy": false,
+            "lf_version": "1.4.3",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parsed Text",
+                "hidden": false,
+                "method": "parse_combined_text",
+                "name": "parsed_text",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "clean_data": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Clean Data",
+                "dynamic": false,
+                "info": "Enable to clean the data by removing empty rows and lines in each cell of the DataFrame/ Data object.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "clean_data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\nfrom typing import Any\n\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    HandleInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    TabInput,\n)\nfrom langflow.schema import Data, DataFrame\nfrom langflow.schema.message import Message\n\n\nclass ParserComponent(Component):\n    display_name = \"Parser\"\n    description = (\n        \"Format a DataFrame or Data object into text using a template. \"\n        \"Enable 'Stringify' to convert input into a readable string instead.\"\n    )\n    icon = \"braces\"\n\n    inputs = [\n        TabInput(\n            name=\"mode\",\n            display_name=\"Mode\",\n            options=[\"Parser\", \"Stringify\"],\n            value=\"Parser\",\n            info=\"Convert into raw string instead of using a template.\",\n            real_time_refresh=True,\n        ),\n        MultilineInput(\n            name=\"pattern\",\n            display_name=\"Template\",\n            info=(\n                \"Use variables within curly brackets to extract column values for DataFrames \"\n                \"or key values for Data.\"\n                \"For example: `Name: {Name}, Age: {Age}, Country: {Country}`\"\n            ),\n            value=\"Text: {text}\",  # Example default\n            dynamic=True,\n            show=True,\n            required=True,\n        ),\n        HandleInput(\n            name=\"input_data\",\n            display_name=\"Data or DataFrame\",\n            input_types=[\"DataFrame\", \"Data\"],\n            info=\"Accepts either a DataFrame or a Data object.\",\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"sep\",\n            display_name=\"Separator\",\n            advanced=True,\n            value=\"\\n\",\n            info=\"String used to separate rows/items.\",\n        ),\n    ]\n\n    outputs = [\n        Output(\n            display_name=\"Parsed Text\",\n            name=\"parsed_text\",\n            info=\"Formatted text output.\",\n            method=\"parse_combined_text\",\n        ),\n    ]\n\n    def update_build_config(self, build_config, field_value, field_name=None):\n        \"\"\"Dynamically hide/show `template` and enforce requirement based on `stringify`.\"\"\"\n        if field_name == \"mode\":\n            build_config[\"pattern\"][\"show\"] = self.mode == \"Parser\"\n            build_config[\"pattern\"][\"required\"] = self.mode == \"Parser\"\n            if field_value:\n                clean_data = BoolInput(\n                    name=\"clean_data\",\n                    display_name=\"Clean Data\",\n                    info=(\n                        \"Enable to clean the data by removing empty rows and lines \"\n                        \"in each cell of the DataFrame/ Data object.\"\n                    ),\n                    value=True,\n                    advanced=True,\n                    required=False,\n                )\n                build_config[\"clean_data\"] = clean_data.to_dict()\n            else:\n                build_config.pop(\"clean_data\", None)\n\n        return build_config\n\n    def _clean_args(self):\n        \"\"\"Prepare arguments based on input type.\"\"\"\n        input_data = self.input_data\n\n        match input_data:\n            case list() if all(isinstance(item, Data) for item in input_data):\n                msg = \"List of Data objects is not supported.\"\n                raise ValueError(msg)\n            case DataFrame():\n                return input_data, None\n            case Data():\n                return None, input_data\n            case dict() if \"data\" in input_data:\n                try:\n                    if \"columns\" in input_data:  # Likely a DataFrame\n                        return DataFrame.from_dict(input_data), None\n                    # Likely a Data object\n                    return None, Data(**input_data)\n                except (TypeError, ValueError, KeyError) as e:\n                    msg = f\"Invalid structured input provided: {e!s}\"\n                    raise ValueError(msg) from e\n            case _:\n                msg = f\"Unsupported input type: {type(input_data)}. Expected DataFrame or Data.\"\n                raise ValueError(msg)\n\n    def parse_combined_text(self) -> Message:\n        \"\"\"Parse all rows/items into a single text or convert input to string if `stringify` is enabled.\"\"\"\n        # Early return for stringify option\n        if self.mode == \"Stringify\":\n            return self.convert_to_string()\n\n        df, data = self._clean_args()\n\n        lines = []\n        if df is not None:\n            for _, row in df.iterrows():\n                formatted_text = self.pattern.format(**row.to_dict())\n                lines.append(formatted_text)\n        elif data is not None:\n            formatted_text = self.pattern.format(**data.data)\n            lines.append(formatted_text)\n\n        combined_text = self.sep.join(lines)\n        self.status = combined_text\n        return Message(text=combined_text)\n\n    def _safe_convert(self, data: Any) -> str:\n        \"\"\"Safely convert input data to string.\"\"\"\n        try:\n            if isinstance(data, str):\n                return data\n            if isinstance(data, Message):\n                return data.get_text()\n            if isinstance(data, Data):\n                return json.dumps(data.data)\n            if isinstance(data, DataFrame):\n                if hasattr(self, \"clean_data\") and self.clean_data:\n                    # Remove empty rows\n                    data = data.dropna(how=\"all\")\n                    # Remove empty lines in each cell\n                    data = data.replace(r\"^\\s*$\", \"\", regex=True)\n                    # Replace multiple newlines with a single newline\n                    data = data.replace(r\"\\n+\", \"\\n\", regex=True)\n                return data.to_markdown(index=False)\n            return str(data)\n        except (ValueError, TypeError, AttributeError) as e:\n            msg = f\"Error converting data: {e!s}\"\n            raise ValueError(msg) from e\n\n    def convert_to_string(self) -> Message:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        result = \"\"\n        if isinstance(self.input_data, list):\n            result = \"\\n\".join([self._safe_convert(item) for item in self.input_data])\n        else:\n            result = self._safe_convert(self.input_data)\n        self.log(f\"Converted to string with length: {len(result)}\")\n\n        message = Message(text=result)\n        self.status = message\n        return message\n"
+              },
+              "input_data": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Data or DataFrame",
+                "dynamic": false,
+                "info": "Accepts either a DataFrame or a Data object.",
+                "input_types": [
+                  "DataFrame",
+                  "Data"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_data",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "mode": {
+                "_input_type": "TabInput",
+                "advanced": false,
+                "display_name": "Mode",
+                "dynamic": false,
+                "info": "Convert into raw string instead of using a template.",
+                "name": "mode",
+                "options": [
+                  "Parser",
+                  "Stringify"
+                ],
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "tab",
+                "value": "Stringify"
+              },
+              "pattern": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Template",
+                "dynamic": true,
+                "info": "Use variables within curly brackets to extract column values for DataFrames or key values for Data.For example: `Name: {Name}, Age: {Age}, Country: {Country}`",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "pattern",
+                "placeholder": "",
+                "required": false,
+                "show": false,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Text: {text}"
+              },
+              "sep": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Separator",
+                "dynamic": false,
+                "info": "String used to separate rows/items.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sep",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "\\n---\\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ParserComponent"
+        },
+        "dragging": false,
+        "id": "ParserComponent-bmh45",
+        "measured": {
+          "height": 312,
+          "width": 320
+        },
+        "position": {
+          "x": 702.7431622262305,
+          "y": -363.69597398911174
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt-CXyt7",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "context",
+                "query"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt",
+            "documentation": "",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "prompts",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.4.3",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt Message",
+                "hidden": false,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    icon = \"prompts\"\n    trace_type = \"prompt\"\n    name = \"Prompt\"\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt Message\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "context": {
+                "advanced": false,
+                "display_name": "context",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "context",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "query": {
+                "advanced": false,
+                "display_name": "query",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "query",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "Eres un asistente experto en análisis de manuales técnicos. Tienes acceso a información tanto textual como visual.\n\nContexto recuperado del manual:\n{context}\n\nConsulta del usuario: {query}\n\nInstrucciones específicas:\n1. Analiza cuidadosamente el contexto proporcionado\n2. Si la información incluye referencias a imágenes o diagramas, menciónalo\n3. Proporciona respuestas precisas y completas\n4. Si no tienes información suficiente, indica \"No se encuentra información relevante en el manual\"\n5. Incluye referencias específicas cuando sea posible\n\nRespuesta basada en el manual:"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt"
+        },
+        "dragging": false,
+        "id": "Prompt-CXyt7",
+        "measured": {
+          "height": 495,
+          "width": 320
+        },
+        "position": {
+          "x": 1117.2508662789623,
+          "y": 151.85414728036616
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Webhook-Sh0wG",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Recibe mensajes de webhook de Telegram",
+            "display_name": "Telegram Chat Input",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "webhook_payload"
+            ],
+            "frozen": false,
+            "icon": "MessageSquare",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "hidden": false,
+                "method": "extract_message",
+                "name": "message",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat ID",
+                "hidden": false,
+                "method": "extract_chat_id",
+                "name": "chat_id",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\nfrom langflow.io import MessageTextInput, Output\nfrom langflow.schema.message import Message\nimport json\n\nclass TelegramChatInput(Component):\n    display_name = \"Telegram Chat Input\"\n    description = \"Recibe mensajes de webhook de Telegram\"\n    icon = \"MessageSquare\"\n    \n    inputs = [\n        MessageTextInput(\n            name=\"webhook_payload\",\n            display_name=\"Webhook Payload\",\n            info=\"JSON del webhook de Telegram\",\n            required=True\n        )\n    ]\n    \n    outputs = [\n        Output(display_name=\"Message\", name=\"message\", method=\"extract_message\"),\n        Output(display_name=\"Chat ID\", name=\"chat_id\", method=\"extract_chat_id\")\n    ]\n    \n    def parse_telegram_webhook(self):\n        \"\"\"Parsea el webhook de Telegram\"\"\"\n        try:\n            if isinstance(self.webhook_payload, str):\n                data = json.loads(self.webhook_payload)\n            else:\n                data = self.webhook_payload\n            \n            message = data.get(\"message\", {})\n            chat = message.get(\"chat\", {})\n            user = message.get(\"from\", {})\n            \n            return {\n                \"message_text\": message.get(\"text\", \"\"),\n                \"chat_id\": str(chat.get(\"id\", \"\")),\n                \"user_name\": user.get(\"first_name\", \"Usuario\")\n            }\n            \n        except Exception as e:\n            return {\n                \"message_text\": f\"Error: {str(e)}\",\n                \"chat_id\": \"\",\n                \"user_name\": \"Error\"\n            }\n    \n    def extract_message(self) -> Message:\n        \"\"\"Extrae el mensaje del usuario\"\"\"\n        parsed = self.parse_telegram_webhook()\n        \n        return Message(\n            text=parsed[\"message_text\"],\n            sender=\"User\",\n            sender_name=parsed[\"user_name\"],\n            session_id=parsed[\"chat_id\"]\n        )\n    \n    def extract_chat_id(self) -> Message:\n        \"\"\"Extrae el Chat ID\"\"\"\n        parsed = self.parse_telegram_webhook()\n        \n        return Message(\n            text=parsed[\"chat_id\"],\n            sender=\"System\",\n            sender_name=\"ChatID\"\n        )"
+              },
+              "webhook_payload": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Webhook Payload",
+                "dynamic": false,
+                "info": "JSON del webhook de Telegram",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "webhook_payload",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TelegramChatInput"
+        },
+        "dragging": false,
+        "id": "Webhook-Sh0wG",
+        "measured": {
+          "height": 278,
+          "width": 320
+        },
+        "position": {
+          "x": -695.8006478354288,
+          "y": -527.3970330333605
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Webhook-0T5Mg",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Envía respuestas a Telegram",
+            "display_name": "Telegram Chat Output",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "rag_response",
+              "chat_id",
+              "telegram_token"
+            ],
+            "frozen": false,
+            "icon": "Send",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Send Status",
+                "hidden": null,
+                "method": "send_to_telegram",
+                "name": "send_status",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "chat_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Chat ID",
+                "dynamic": false,
+                "info": "ID del chat de Telegram",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "chat_id",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\nfrom langflow.io import MessageTextInput, SecretStrInput, Output\nfrom langflow.schema.message import Message\nimport requests\n\nclass TelegramChatOutput(Component):\n    display_name = \"Telegram Chat Output\"\n    description = \"Envía respuestas a Telegram\"\n    icon = \"Send\"\n    \n    inputs = [\n        MessageTextInput(\n            name=\"rag_response\",\n            display_name=\"RAG Response\",\n            info=\"Respuesta del sistema RAG\",\n            required=True\n        ),\n        MessageTextInput(\n            name=\"chat_id\",\n            display_name=\"Chat ID\", \n            info=\"ID del chat de Telegram\",\n            required=True\n        ),\n        SecretStrInput(\n            name=\"telegram_token\",\n            display_name=\"Telegram Bot Token\",\n            info=\"Token del bot de Telegram\",\n            required=True\n        )\n    ]\n    \n    outputs = [\n        Output(display_name=\"Send Status\", name=\"send_status\", method=\"send_to_telegram\")\n    ]\n    \n    def extract_text(self, input_data):\n        \"\"\"Extrae texto de Message o string\"\"\"\n        if hasattr(input_data, 'text'):\n            return input_data.text\n        elif isinstance(input_data, str):\n            return input_data\n        else:\n            return str(input_data)\n    \n    def send_to_telegram(self) -> Message:\n        \"\"\"Envía mensaje a Telegram\"\"\"\n        try:\n            # Extraer datos\n            response_text = self.extract_text(self.rag_response)\n            chat_id = self.extract_text(self.chat_id)\n            \n            # Validar\n            if not response_text or not chat_id or not self.telegram_token:\n                return Message(\n                    text=\"❌ Error: Datos incompletos\",\n                    sender=\"TelegramBot\"\n                )\n            \n            # URL de la API\n            url = f\"https://api.telegram.org/bot{self.telegram_token}/sendMessage\"\n            \n            # Payload\n            payload = {\n                \"chat_id\": chat_id,\n                \"text\": response_text\n            }\n            \n            # Enviar\n            response = requests.post(url, json=payload, timeout=30)\n            \n            if response.status_code == 200:\n                result = response.json()\n                if result.get(\"ok\"):\n                    return Message(\n                        text=f\"✅ Mensaje enviado a chat {chat_id}\",\n                        sender=\"TelegramBot\",\n                        session_id=chat_id\n                    )\n                else:\n                    return Message(\n                        text=f\"❌ Error API: {result.get('description', 'Unknown')}\",\n                        sender=\"TelegramBot\"\n                    )\n            else:\n                return Message(\n                    text=f\"❌ HTTP Error {response.status_code}\",\n                    sender=\"TelegramBot\"\n                )\n        \n        except Exception as e:\n            return Message(\n                text=f\"❌ Error: {str(e)}\",\n                sender=\"TelegramBot\"\n            )"
+              },
+              "rag_response": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "RAG Response",
+                "dynamic": false,
+                "info": "Respuesta del sistema RAG",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "rag_response",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "telegram_token": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Telegram Bot Token",
+                "dynamic": false,
+                "info": "Token del bot de Telegram",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "telegram_token",
+                "password": true,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TelegramChatOutput"
+        },
+        "dragging": false,
+        "id": "Webhook-0T5Mg",
+        "measured": {
+          "height": 395,
+          "width": 320
+        },
+        "position": {
+          "x": 2081.1659135419795,
+          "y": -347.2180478023571
+        },
+        "selected": true,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": 685.9714449379376,
+      "y": 349.08496839878103,
+      "zoom": 0.5073315506790906
+    }
+  },
+  "description": "Crafting Conversations, One Node at a Time.",
+  "endpoint_name": null,
+  "id": "9d96bf70-483c-4d62-b44e-f5f3a556a476",
+  "is_component": false,
+  "last_tested_version": "1.4.3",
+  "name": "RAG JINA con Telegram",
+  "tags": []
+}

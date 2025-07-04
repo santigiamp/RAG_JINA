@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  langflow:
+    image: langflowai/langflow:latest
+    container_name: langflow-manual-bot
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    environment:
+      # LangFlow Configuration
+      - LANGFLOW_HOST=0.0.0.0
+      - LANGFLOW_PORT=7860
+      - LANGFLOW_WORKERS=1
+      - LANGFLOW_LOG_LEVEL=INFO
+      
+      # AI APIs
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - COHERE_API_KEY=${COHERE_API_KEY}
+      - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      
+      # Vector Databases
+      - QDRANT_URL=${QDRANT_URL}
+      - QDRANT_API_KEY=${QDRANT_API_KEY}
+      - PINECONE_API_KEY=${PINECONE_API_KEY}
+      - PINECONE_ENVIRONMENT=${PINECONE_ENVIRONMENT}
+      
+      # Communication
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      
+      # External APIs
+      - RAG_API_URL=${RAG_API_URL}
+      - WEBHOOK_TEST_URL=${WEBHOOK_TEST_URL}
+      - IMGBB_API_KEY=${IMGBB_API_KEY}
+      - CLOUDINARY_URL=${CLOUDINARY_URL}
+      
+    volumes:
+      - langflow_data:/app/langflow
+    restart: unless-stopped
+    depends_on:
+      - qdrant
+    networks:
+      - langflow-network
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: qdrant-langflow
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__HTTP_PORT=6333
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    restart: unless-stopped
+    networks:
+      - langflow-network
+
+  # Opcional: PostgreSQL para persistencia
+  postgres:
+    image: postgres:13
+    container_name: langflow-postgres
+    environment:
+      - POSTGRES_DB=langflow
+      - POSTGRES_USER=langflow
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - langflow-network
+
+volumes:
+  langflow_data:
+  qdrant_data:
+  postgres_data:
+
+networks:
+  langflow-network:
+    driver: bridge
