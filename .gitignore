@@ -1,0 +1,64 @@
+# Archivos de entorno - NUNCA subir archivos .env reales
+.env
+.env.*
+!.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Archivos de configuración de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.logs
+logs/
+checkpoint_*.json
+
+# Archivos de datos
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.csv
+*.xlsx
+*.xls
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración específicos del proyecto
+langflow.db
+langflow_config.yaml
